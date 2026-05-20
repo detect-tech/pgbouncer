@@ -1,0 +1,69 @@
+# VCS
+.git
+.gitignore
+.gitattributes
+.editorconfig
+
+# CI
+.cirrus.yml
+
+# Editor / OS
+*.swp
+.DS_Store
+
+# Build artifacts (in case the host already ran configure/make)
+/aclocal.m4
+/config.guess
+/config.log
+/config.mak
+/config.status
+/config.sub
+/configure
+/configure~
+/install-sh
+/pgbouncer
+/.objs
+/tags
+/doc/pgbouncer_1.md
+/doc/pgbouncer_5.md
+**/*.o
+**/*.a
+**/*.la
+**/*.lo
+**/.deps
+**/.libs
+
+# Test scratch
+/test/.objs
+/test/hba_test
+/test/log
+/test/pgdata
+/test/test.log
+/test/test.pid
+/test/ssl/log
+/test/ssl/tmp
+/test/ssl/pgdata
+/test/ssl/test.log
+/test/ssl/test.pid
+/test/ssl/TestCA*
+
+# Python tooling
+__pycache__
+*.pyc
+env
+venv
+.venv
+
+# Windows-only sources are not needed by the Linux image
+/win32
+
+# Tarballs / archives we never want to bake into a layer
+*.tar.gz
+*.zip
+*.html
+*.xml
+*.exe
+
+# Docker artifacts themselves
+Dockerfile
+.dockerignore
